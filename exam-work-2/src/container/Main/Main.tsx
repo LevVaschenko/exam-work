@@ -29,7 +29,7 @@ const Main = ({ addProductToCart }: Props) => {
                 <Menu />
                 <Routes>
                     <Route
-                        path="/usd"
+                        path="/"
                         element={<Home addProductToCart={addProductToCart} />}
                     />
                     <Route

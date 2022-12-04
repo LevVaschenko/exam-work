@@ -8,7 +8,7 @@ const Menu = (props: Props) => {
     return (
         <>
             <div className="currencies">
-                <MenuItem to="/usd">
+                <MenuItem to="/">
                     <button className="currency">USD</button>
                 </MenuItem>
                 <MenuItem to="/eur">
