@@ -1,0 +1,60 @@
+.title {
+    font-size: 36px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    border: 1px solid black !important;
+    background-color: #efefef !important;
+    color: black !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.css-1n4twyu-MuiInputBase-input-MuiOutlinedInput-input {
+    border: none !important;
+    width: 27px !important;
+    padding: 2px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root {
+    border: none !important;
+    border-radius: 0px !important;
+    position: static !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root:hover {
+    cursor: pointer !important;
+}
+
+.css-1n4twyu-MuiInputBase-input-MuiOutlinedInput-input:hover {
+    cursor: pointer !important;
+}
+
+.css-1u3bzj6-MuiFormControl-root-MuiTextField-root:hover {
+    cursor: pointer !important;
+}
+
+.css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
+    border: none !important;
+    position: static !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
