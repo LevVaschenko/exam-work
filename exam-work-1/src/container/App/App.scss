@@ -21,40 +21,38 @@
     align-items: center !important;
 }
 
-.css-1n4twyu-MuiInputBase-input-MuiOutlinedInput-input {
+#r1 {
     border: none !important;
-    width: 27px !important;
-    padding: 2px !important;
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
+    width: 28px;
+    padding: 5px;
 }
 
-.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root {
+#r2 {
     border: none !important;
     border-radius: 0px !important;
     position: static !important;
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
+    width: 28px;
+    padding: 5px;
 }
 
-.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root:hover {
+#r1,
+#r2,
+#r3 {
     cursor: pointer !important;
 }
 
-.css-1n4twyu-MuiInputBase-input-MuiOutlinedInput-input:hover {
-    cursor: pointer !important;
-}
-
-.css-1u3bzj6-MuiFormControl-root-MuiTextField-root:hover {
-    cursor: pointer !important;
-}
-
-.css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
+#r3 {
     border: none !important;
     position: static !important;
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
+    width: 28px;
+    padding: 5px;
 }

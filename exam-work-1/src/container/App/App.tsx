@@ -25,14 +25,14 @@ function App() {
                     onClick={() => onIncrementClick1()}
                     className="button"
                 >
-                    Change count (
+                    Change count
                     <TextField
                         size="small"
                         value={count1}
                         variant="outlined"
                         className="input"
+                        id='r1'
                     />
-                    )
                 </Button>
                 <Button
                     variant="contained"
@@ -40,14 +40,14 @@ function App() {
                     onClick={() => onIncrementClick2()}
                     className="button"
                 >
-                    Change count (
+                    Change count
                     <TextField
                         size="small"
                         value={count2}
                         variant="outlined"
                         className="input"
+                        id='r2'
                     />
-                    )
                 </Button>
                 <Button
                     variant="contained"
@@ -55,14 +55,14 @@ function App() {
                     onClick={() => onIncrementClick3()}
                     className="button"
                 >
-                    Change count (
+                    Change count
                     <TextField
                         size="small"
                         value={count3}
                         variant="outlined"
                         className="input"
+                        id='r3'
                     />
-                    )
                 </Button>
             </div>
         </>
