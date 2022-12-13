@@ -1,15 +1,19 @@
+import { currencyExchange } from 'helpers/currencyExchange'
 import React from 'react'
 import './Total.scss'
 
 type Props = {
     totalCount: number
     totalPrice: number
+    typeCurrency: 'USD' | 'EUR' | 'UAH' | 'PLN'
 }
 
-const CartFooter = ({ totalCount, totalPrice }: Props) => {
+const CartFooter = ({ totalCount, totalPrice, typeCurrency }: Props) => {
+    const newTotalPrice = currencyExchange(totalPrice, typeCurrency)
+
     return (
         <div>
-            <div className="totalPrice">Total: {totalPrice}</div>
+            <div className="totalPrice">Total: {newTotalPrice}</div>
         </div>
     )
 }

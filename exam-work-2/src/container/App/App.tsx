@@ -23,6 +23,10 @@ function App() {
         totalPrice: 0,
     })
 
+    const [typeCurrency, setTypeCurrency] = useState<
+        'USD' | 'EUR' | 'UAH' | 'PLN'
+    >('USD')
+
     const addProductToCart = (count: number, price: number) => {
         setCartData((prevState: CartData) => ({
             totalCount: prevState.totalCount + count,
@@ -35,8 +39,12 @@ function App() {
             <StyledEngineProvider injectFirst>
                 <CssBaseline />
                 <Container maxWidth="lg">
-                    <Main addProductToCart={addProductToCart} />
-                    <Footer cartData={cartData} />
+                    <Main
+                        addProductToCart={addProductToCart}
+                        onChange={setTypeCurrency}
+                        typeCurrency={typeCurrency}
+                    />
+                    <Footer cartData={cartData} typeCurrency={typeCurrency} />
                 </Container>
             </StyledEngineProvider>
         </>

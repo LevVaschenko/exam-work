@@ -1,17 +1,16 @@
-import { Button, Typography } from '@mui/material'
+import { Typography } from '@mui/material'
 import { Container } from '@mui/system'
-import ProductsListEUR from 'pages/EUR/ProductListEUR'
 import Home from 'pages/Home/Home'
-import ProductsListPLN from 'pages/PLN/ProductListPLN'
-import ProductsListUAH from 'pages/UAH/ProductListUAH'
 import { Route, Routes } from 'react-router-dom'
 import Menu from './Menu'
 
 type Props = {
     addProductToCart: (count: number, price: number) => void
+    onChange: (value: 'USD' | 'EUR' | 'UAH' | 'PLN') => void
+    typeCurrency: 'USD' | 'EUR' | 'UAH' | 'PLN'
 }
 
-const Main = ({ addProductToCart }: Props) => {
+const Main = ({ addProductToCart, onChange, typeCurrency }: Props) => {
     return (
         <main>
             <Container maxWidth="lg">
@@ -26,25 +25,11 @@ const Main = ({ addProductToCart }: Props) => {
                 >
                     Our Shop Page
                 </Typography>
-                <Menu />
-                <Routes>
-                    <Route
-                        path="/"
-                        element={<Home addProductToCart={addProductToCart} />}
-                    />
-                    <Route
-                        path="/eur"
-                        element={<ProductsListEUR addProductToCart={addProductToCart} />}
-                    />
-                    <Route
-                        path="/uah"
-                        element={<ProductsListUAH addProductToCart={addProductToCart} />}
-                    />
-                    <Route
-                        path="/pln"
-                        element={<ProductsListPLN addProductToCart={addProductToCart} />}
-                    />
-                </Routes>
+                <Menu onChange={onChange} />
+                <Home
+                    addProductToCart={addProductToCart}
+                    typeCurrency={typeCurrency}
+                />
             </Container>
         </main>
     )

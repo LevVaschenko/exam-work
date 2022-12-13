@@ -1,25 +1,19 @@
-import React from 'react'
+import React, { FC } from 'react'
 import './Main.scss'
 import MenuItem from './MenuItem'
 
-type Props = {}
+type Props = {
+  onChange: (value: 'USD' | 'EUR' | 'UAH' | 'PLN') => void
+}
 
-const Menu = (props: Props) => {
+const Menu: FC<Props> = ({ onChange }) => {
     return (
         <>
             <div className="currencies">
-                <MenuItem to="/">
-                    <button className="currency">USD</button>
-                </MenuItem>
-                <MenuItem to="/eur">
-                    <button className="currency">EUR</button>
-                </MenuItem>
-                <MenuItem to="/uah">
-                    <button className="currency">UAH</button>
-                </MenuItem>
-                <MenuItem to="/pln">
-                    <button className="currency">PLN</button>
-                </MenuItem>
+              <button className="currency" onClick={() => onChange('USD')}>USD</button>
+              <button className="currency" onClick={() => onChange('EUR')}>EUR</button>
+              <button className="currency" onClick={() => onChange('UAH')}>UAH</button>
+              <button className="currency" onClick={() => onChange('PLN')}>PLN</button>
             </div>
         </>
     )
